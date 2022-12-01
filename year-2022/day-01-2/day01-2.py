@@ -12,4 +12,4 @@ def heaviest_3_loads(path):
 
 
 if __name__ == '__main__':
-    print(sum(heaviest_3_loads('./input')))
+    print(sum(heaviest_3_loads('input')))
