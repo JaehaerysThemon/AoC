@@ -19,6 +19,7 @@ def valid_password_2(path):
                 counter += 1
         return counter
 
+
 if __name__ == '__main__':
     print(valid_password('./input'))
     print(valid_password_2('./input'))
