@@ -28,7 +28,6 @@ def xmas_range(nums, weak_num):
             return min(addends) + max(addends)
 
 
-
 if __name__ == '__main__':
     with open('./input', 'r') as file:
         weak_num = xmas_fist_nonsum(file, 25)
