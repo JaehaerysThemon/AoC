@@ -18,7 +18,7 @@ def play_rpc(path):
             result = 0 if game[-1] == 'X' else 3 if game[-1] == 'Y' else 6
             opp = 1 if game[0] == 'A' else 2 if game[0] == 'B' else 3
             you = opp if result == 3 else opp - 1 if result == 0 else opp + 1
-            score += result + (3 if you % 3 == 0 else you%3)
+            score += result + (3 if you % 3 == 0 else you % 3)
         return score
 
 
