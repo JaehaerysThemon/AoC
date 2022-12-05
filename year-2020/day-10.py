@@ -6,7 +6,6 @@ def jolt_difference(adapters_file):
     diffs = [adapters[0]]
     for i in range(1, len(adapters)):
         diffs.append(adapters[i]-adapters[i-1])
-    print(diffs)
     jolt_1_diff = diffs.count(1)
     jolt_3_diff = 1 + diffs.count(3)
     return jolt_1_diff * jolt_3_diff
@@ -42,7 +41,7 @@ def jolt_arrangements(adapters_file):
 
 
 if __name__ == '__main__':
-    with open('./input', 'r') as file:
+    with open('./input/day-10.ipt', 'r') as file:
         print(jolt_difference(file))
-    with open('./input', 'r') as file:
+    with open('./input/day-10.ipt', 'r') as file:
         print(jolt_arrangements(file))

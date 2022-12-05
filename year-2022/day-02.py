@@ -23,5 +23,5 @@ def play_rpc(path):
 
 
 if __name__ == '__main__':
-    print(rpc('input'))
-    print(play_rpc('input'))
+    print(rpc('./input/day-02.ipt'))
+    print(play_rpc('./input/day-02.ipt'))

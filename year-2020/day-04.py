@@ -11,7 +11,6 @@ def valid_passport(path):
         passport = []
         for line in file:
             if line == '\n':
-                print(passport,  check_fields(passport))
                 if check_fields(passport):
                     count += 1
                 passport = []
@@ -23,5 +22,5 @@ def valid_passport(path):
 
 
 if __name__ == '__main__':
-    print(valid_passport('./input'))
-    print(valid_passport('./input'))
+    print(valid_passport('./input/day-04.ipt'))
+    print(valid_passport('./input/day-04.ipt'))

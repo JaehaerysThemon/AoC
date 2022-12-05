@@ -28,5 +28,5 @@ def find_2020_3(path):
 
 
 if __name__ == '__main__':
-    print(find_2020('./input'))
-    print(find_2020_3('./input'))
+    print(find_2020('./input/day-01.ipt'))
+    print(find_2020_3('./input/day-01.ipt'))

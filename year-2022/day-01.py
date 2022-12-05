@@ -23,5 +23,5 @@ def heaviest_3_loads(path):
 
 
 if __name__ == '__main__':
-    print(heaviest_loads('input'))
-    print(sum(heaviest_3_loads('input')))
+    print(heaviest_loads('./input/day-01.ipt'))
+    print(sum(heaviest_3_loads('./input/day-01.ipt')))

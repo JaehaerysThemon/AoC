@@ -24,7 +24,7 @@ def find_badge(rucksacks):
 
 
 if __name__ == '__main__':
-    with open('./input', 'r') as file:
+    with open('./input/day-01.ipt', 'r') as file:
         print(find_duplicates(file))
-    with open('./input', 'r') as file:
+    with open('./input/day-01.ipt', 'r') as file:
         print(find_badge(file))

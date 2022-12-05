@@ -19,7 +19,7 @@ def find_overlapping_shifts(shift_pairs):
 
 
 if __name__ == '__main__':
-    with open('input', 'r') as file:
+    with open('./input/day-04.ipt', 'r') as file:
         print(find_containing_shifts(file))
-    with open('input', 'r') as file:
+    with open('./input/day-04.ipt', 'r') as file:
         print(find_overlapping_shifts(file))

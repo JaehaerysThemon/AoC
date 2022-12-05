@@ -21,5 +21,5 @@ def valid_password_2(path):
 
 
 if __name__ == '__main__':
-    print(valid_password('./input'))
-    print(valid_password_2('./input'))
+    print(valid_password('./input/day-02.ipt'))
+    print(valid_password_2('./input/day-02.ipt'))

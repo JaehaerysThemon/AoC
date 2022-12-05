@@ -9,20 +9,19 @@ def restack_container_9000(containers_9000, instructions):
     return ''.join(last_containers)
 
 
-def restack_container_9001(containers_9001, instructions):
+def restack_container_9001(containers, instructions):
     for instruction in instructions:
-        moving_container = containers_9001[instruction[1]-1][-1*instruction[0]:]
-        for i in range(len(moving_container)):
-            containers[instruction[1]-1].pop()
-            containers[instruction[2]-1].append(moving_container[i])
-    last_containers = [container[-1] for container in containers_9001]
+        moving_container = containers[instruction[1]-1][-1*instruction[0]:]
+        del containers[instruction[1]-1][-1*instruction[0]:]
+        containers[instruction[2]-1].extend(moving_container)
+    last_containers = [container[-1] for container in containers]
     return ''.join(last_containers)
 
 if __name__ == '__main__':
     containers_str = []
     instructions = []
     containers = []
-    with open('input', 'r') as file:
+    with open('./input/day-05.ipt', 'r') as file:
         instruction_lines = False
         for line in file:
             if not instruction_lines:
@@ -47,14 +46,14 @@ if __name__ == '__main__':
     containers_str = []
     instructions = []
     containers = []
-    with open('input', 'r') as file:
+    with open('./input/day-05.ipt', 'r') as file:
         instruction_lines = False
         for line in file:
             if not instruction_lines:
                 if line == '\n':
                     instruction_lines = True
                 else:
-                    if len(line)%4 == 0:
+                    if len(line) % 4 == 0:
                         containers_str.append(line)
             else:
                 instructions.append(list(map(int, line.split(' ')[1::2])))

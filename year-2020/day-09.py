@@ -29,8 +29,8 @@ def xmas_range(nums, weak_num):
 
 
 if __name__ == '__main__':
-    with open('./input', 'r') as file:
+    with open('./input/day-09.ipt', 'r') as file:
         weak_num = xmas_fist_nonsum(file, 25)
         print(weak_num)
-    with open('./input', 'r') as file:
+    with open('./input/day-09.ipt', 'r') as file:
         print(xmas_range(file, weak_num))
