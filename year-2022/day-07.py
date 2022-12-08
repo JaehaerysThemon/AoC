@@ -1,16 +1,9 @@
 def get_file_sizes(dirs):
-    sums = 0
-    for size in dirs.values():
-        if size <= 100000:
-            sums += size
-    return sums
+    return sum([size for size in dirs.values() if size <= 100000])
 
-def find_samllest_delete_dir(dirs):
-    big_dirs = []
-    for size in dirs.values():
-        if size >= dirs['/'] - 40000000:
-            big_dirs.append(size)
-    return min(big_dirs)
+
+def find_smallest_delete_dir(dirs):
+    return min([size for size in dirs.values() if size >= dirs['/'] - 40000000])
 
 
 if __name__ == '__main__':
@@ -32,4 +25,4 @@ if __name__ == '__main__':
             for a_dir in active_dir:
                 dir_size[a_dir] += int(line[0])
     print(get_file_sizes(dir_size))
-    print(find_samllest_delete_dir(dir_size))
+    print(find_smallest_delete_dir(dir_size))

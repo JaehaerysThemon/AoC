@@ -13,11 +13,24 @@ def is_visible(y,x, forest):
     row, col = (forest.shape)
     if x == 0 or y == 0 or x == col-1 or y == row -1:
         return True
-    down = get_site(forest, y+1,row,1,x, y,True)
-    up = get_site(forest, y-1, -1, -1, x, y, True)
-    left = get_site(forest, x+1, col, 1, x, y, False)
-    right = get_site(forest, x-1, -1, -1, x, y, False)
-    if up or down or left or right:
+    invisible_site = 0
+    for i in range(x+1, row):
+        if forest[i, y] >= forest[x, y]:
+            invisible_site += 1
+            break
+    for i in range(x-1, -1, -1):
+        if forest[i, y] >= forest[x, y]:
+            invisible_site += 1
+            break
+    for i in range(y+1, col):
+        if forest[x, i] >= forest[x, y]:
+            invisible_site += 1
+            break
+    for i in range(y-1, -1, -1):
+        if forest[x, i] >= forest[x, y]:
+            invisible_site += 1
+            break
+    if invisible_site < 4:
         return True
     return False
 
