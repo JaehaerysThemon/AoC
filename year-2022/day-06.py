@@ -9,4 +9,4 @@ if __name__ == '__main__':
         line = file.readline()
 
     print(find_make(line))
-    print(find_make(line,14))
+    print(find_make(line, 14))

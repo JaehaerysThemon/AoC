@@ -41,6 +41,7 @@ if __name__ == '__main__':
         for i in range(int(len(container)/4)):
             if container[4*i + 1] != ' ':
                 containers[i].append(container[4*i + 1])
+    print(containers)
     print(restack_container_9000(containers.copy(), instructions))
 
     containers_str = []
